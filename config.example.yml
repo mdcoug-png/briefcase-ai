@@ -1,0 +1,102 @@
+# ============================================
+# 💼 BriefCase — Your AI Morning Brief
+# ============================================
+# Copy this file to config.yml and personalize it.
+# The more specific you are, the better your brief.
+
+# ── Who You Are ──────────────────────────────
+# Your role shapes how BriefCase filters and frames everything.
+role: "VP of Marketing at a B2B SaaS company"
+industry: "Enterprise software"
+
+# ── What You Care About ──────────────────────
+# Be specific. "AI" is too broad. "AI agents replacing SDR workflows" is perfect.
+topics:
+  - AI and enterprise technology adoption
+  - SaaS growth and PLG strategies
+  - Content marketing and thought leadership
+  - Competitive intelligence and market shifts
+
+# ── Watchlist (optional) ─────────────────────
+# Track specific companies, people, or products.
+watchlist:
+  companies:
+    # - OpenAI
+    # - HubSpot
+    # - Your competitors here
+  people:
+    # - Satya Nadella
+    # - Your industry thought leaders here
+  products:
+    # - ChatGPT
+    # - Specific tools you track
+
+# ── Brief Style ──────────────────────────────
+tone: "sharp and direct"
+# Options: "sharp and direct" | "casual and warm" | "executive summary" | "detailed analyst"
+
+max_items: 10
+# Total items across all three sections (Intel + Impact + Angles)
+
+language: "en"
+# ISO language code for the brief output
+
+# ── Sections ─────────────────────────────────
+# Toggle sections on/off or customize their focus.
+sections:
+  intel:
+    enabled: true
+    focus: "industry moves, competitor signals, market shifts"
+  impact:
+    enabled: true
+    focus: "strategic decisions, business implications, opportunities and risks"
+  angles:
+    enabled: true
+    focus: "LinkedIn posts, talking points, contrarian takes, content ideas"
+
+# ── Delivery ─────────────────────────────────
+delivery:
+  method: "markdown"
+  # Options: markdown | telegram | discord | slack | email
+
+  time: "06:00"
+  timezone: "America/New_York"
+
+  # Output directory for markdown delivery
+  output_dir: "briefs"
+
+  # ── Telegram ──
+  # telegram_bot_token: "your-bot-token"
+  # telegram_chat_id: "your-chat-id"
+
+  # ── Discord ──
+  # discord_webhook_url: "https://discord.com/api/webhooks/..."
+
+  # ── Slack ──
+  # slack_webhook_url: "https://hooks.slack.com/services/..."
+
+  # ── Email ──
+  # smtp_host: "smtp.gmail.com"
+  # smtp_port: 587
+  # smtp_user: "you@gmail.com"
+  # smtp_pass: "app-password"
+  # email_from: "BriefCase <briefcase@yourdomain.com>"
+  # email_to: "you@yourdomain.com"
+
+# ── LLM Provider ─────────────────────────────
+llm:
+  provider: "openai"
+  # Options: openai | anthropic | openai-compatible
+
+  model: "gpt-4o"
+  # Or: claude-sonnet-4-20250514, etc.
+
+  # For OpenAI-compatible endpoints (Ollama, Together, etc.):
+  # base_url: "http://localhost:11434/v1"
+
+# ── Search Provider ──────────────────────────
+search:
+  provider: "brave"
+  # Options: brave | serpapi | tavily | none
+
+  # If "none", BriefCase uses direct web scraping (slower, less reliable)
